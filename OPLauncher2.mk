@@ -11,7 +11,11 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     OnePlusRecentsProvider \
-    OPLauncher2 \
+    OPLauncher2 
+
+# Debloat
+ifneq ($(TARGET_MINIMAL_APPS),true)
+PRODUCT_PACKAGES += \
     OPIconpackCircle1 \
     OPIconpackDefault1 \
     OPIconpackHydrogen1 \
@@ -21,4 +25,7 @@ PRODUCT_PACKAGES += \
     OPIconpackSquare1 \
     OPWeather1 \
     OPWidget1
+endif
+
+
 
